@@ -1,5 +1,8 @@
 $ProgressPreference = 'SilentlyContinue'
 
+Invoke-WebRequest -Uri https://go.dev/dl/go1.18.windows-amd64.zip -OutFile c:\go.zip
+Expand-Archive -Path C:\go.zip -DestinationPath c:\
+
 Invoke-WebRequest -Uri https://master.dockerproject.org/windows/x86_64/docker.exe -OutFile c:\windows\docker.exe
 
 Remove-Item -Path bin -Recurse -Force
